@@ -1,4 +1,10 @@
 <div class="list-container">
   <h2>Providers</h2>
-
+  <div *ngFor="let providers of unselectedProviders">
+    <li>
+      <ul>{{providers.name}}</ul>
+      <ul>{{providers.address}}</ul>
+      <ul>{{providers.phone}}</ul>
+    </li>
+  </div>
 </div>

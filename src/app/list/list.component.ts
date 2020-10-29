@@ -28,9 +28,10 @@ export class ListComponent implements OnInit {
       phone: '4343219384'
     }
   ];
-
+  public test: number = 1
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
