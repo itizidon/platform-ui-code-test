@@ -1,6 +1,6 @@
 <div class="list-container">
   <h2>Providers</h2>
-  <div *ngFor="let providers of unselectedProviders">
+  <div *ngFor="let providers of unselectedProviders" (click)="addProvider(providers)">
     <li>
       <ul>{{providers.name}}</ul>
       <ul>{{providers.address}}</ul>

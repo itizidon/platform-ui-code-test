@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   public selectedProviders = [];
+  public providerMap = {};
   public unselectedProviders = [
     {
       id: '1',
@@ -32,6 +33,13 @@ export class ListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+  }
+
+  addProvider(provider){
+    if(!this.providerMap[provider.id]){
+    this.providerMap[provider.id] = this.selectedProviders.length
+    this.selectedProviders.push(provider)
+    }
   }
 
 }
