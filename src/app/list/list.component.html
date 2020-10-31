@@ -2,6 +2,7 @@
   <h2>Providers</h2>
   <div *ngIf="selectedToggle; else showSelected">
     <div *ngFor="let providers of unselectedProviders">
+      <h3>All Providers</h3>
       <li>
         <ul>
           {{
@@ -28,6 +29,7 @@
   </div>
   <ng-template #showSelected
     ><div *ngFor="let providers of selectedProviders">
+      <h3>Saved Providers</h3>
       <li>
         <ul>
           {{
