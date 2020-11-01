@@ -49,8 +49,12 @@ export class ListComponent implements OnInit {
     }
     else {
       for (let i = 0; i < this.selectedProviders.length; i++) {
-        if (this.tempValues.includes(this.selectedProviders[i])) {
-          this.selectedProviders.splice(i, 1)
+
+        for (let j = 0; j < this.tempValues.length; j++) {
+          if (this.tempValues[j].id === this.selectedProviders[i].id) {
+
+            this.selectedProviders.splice(i, 1)
+          }
         }
       }
     }

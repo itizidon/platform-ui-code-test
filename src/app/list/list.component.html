@@ -1,25 +1,23 @@
 <div class="list-container">
   <h2>Providers</h2>
   <div *ngIf="selectedToggle; else showSelected">
+    <h3>All Providers</h3>
     <div *ngFor="let providers of unselectedProviders">
-      <h3>All Providers</h3>
-      <li>
-        <ul>
-          {{
-            providers.name
-          }}
-        </ul>
-        <ul>
-          {{
-            providers.address
-          }}
-        </ul>
-        <ul>
-          {{
-            providers.phone
-          }}
-        </ul>
-      </li>
+      <ul>
+        {{
+          providers.name
+        }}
+      </ul>
+      <ul>
+        {{
+          providers.address
+        }}
+      </ul>
+      <ul>
+        {{
+          providers.phone
+        }}
+      </ul>
       <input
         type="checkbox"
         (change)="addProvider(providers, $event.target.checked)"
@@ -27,26 +25,24 @@
     </div>
     <button (click)="changeToggle()">Submit</button>
   </div>
-  <ng-template #showSelected
-    ><div *ngFor="let providers of selectedProviders">
-      <h3>Saved Providers</h3>
-      <li>
-        <ul>
-          {{
-            providers.name
-          }}
-        </ul>
-        <ul>
-          {{
-            providers.address
-          }}
-        </ul>
-        <ul>
-          {{
-            providers.phone
-          }}
-        </ul>
-      </li>
+  <ng-template #showSelected>
+    <h3>Saved Providers</h3>
+    <div *ngFor="let providers of selectedProviders">
+      <ul>
+        {{
+          providers.name
+        }}
+      </ul>
+      <ul>
+        {{
+          providers.address
+        }}
+      </ul>
+      <ul>
+        {{
+          providers.phone
+        }}
+      </ul>
       <input
         type="checkbox"
         (change)="addProvider(providers, $event.target.checked)"
